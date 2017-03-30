@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SwiftPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-xS-gGq">
+                                <rect key="frame" x="50" y="120" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mut-Zg-HxT">
+                                <rect key="frame" x="50" y="200" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g88-H1-f6A">
+                                <rect key="frame" x="50" y="260" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pB3-VW-5uv"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g88-H1-f6A" secondAttribute="trailing" constant="50" id="A3T-75-GLW"/>
+                            <constraint firstItem="g88-H1-f6A" firstAttribute="top" secondItem="Mut-Zg-HxT" secondAttribute="bottom" constant="30" id="Gyj-L1-9oF"/>
+                            <constraint firstAttribute="trailing" secondItem="Mut-Zg-HxT" secondAttribute="trailing" constant="50" id="OIa-Ph-54f"/>
+                            <constraint firstItem="g88-H1-f6A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="VbL-VF-jad"/>
+                            <constraint firstItem="Mut-Zg-HxT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="ffZ-DA-85w"/>
+                            <constraint firstItem="Mut-Zg-HxT" firstAttribute="top" secondItem="0cg-xS-gGq" secondAttribute="bottom" constant="50" id="iaI-B2-yGN"/>
+                            <constraint firstItem="0cg-xS-gGq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="l13-SL-EfC"/>
+                            <constraint firstItem="0cg-xS-gGq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="ppJ-za-jWK"/>
+                            <constraint firstAttribute="trailing" secondItem="0cg-xS-gGq" secondAttribute="trailing" constant="50" id="qud-Rb-WOb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="g88-H1-f6A" id="yNa-LZ-s0l"/>
+                        <outlet property="passwordTextField" destination="Mut-Zg-HxT" id="sMs-f1-j5n"/>
+                        <outlet property="usernameTextField" destination="0cg-xS-gGq" id="zvr-Pq-S8T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
