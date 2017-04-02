@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+import ReactiveCocoa
+import ReactiveSwift
+import Result
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -17,5 +21,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let username = MutableProperty("")
+        
+        usernameTextField.reactive.text <~ username        
     }
 }
