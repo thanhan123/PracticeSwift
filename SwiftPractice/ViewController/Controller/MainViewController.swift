@@ -22,8 +22,23 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let username = MutableProperty("")
+        let usernameSignal = usernameTextField.reactive.continuousTextValues
+        let passwordSignal = passwordTextField.reactive.continuousTextValues
         
-        usernameTextField.reactive.text <~ username        
+        Signal.combineLatest(usernameSignal, passwordSignal)
+            .observeValues{aString, bString in
+                if aString!.characters.count > 2 && bString!.characters.count > 2 {
+                    self.button.backgroundColor = UIColor.green
+                } else {
+                    self.button.backgroundColor = UIColor.clear
+                }
+                print("username: \(aString!) - password: \(bString!)")
+        }
+        
+//        let a = MutableProperty<String>("")
+//        let b = MutableProperty<String>("")
+        
+//        usernameTextField.reactive.text <~ a
+//        passwordTextField.reactive.text <~ b
     }
 }
