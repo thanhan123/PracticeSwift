@@ -25,6 +25,9 @@ class MainViewController: UIViewController {
         let usernameSignal = usernameTextField.reactive.continuousTextValues
         let passwordSignal = passwordTextField.reactive.continuousTextValues
         
+        let usernameValue = MutableProperty("")
+        let passwordValue = MutableProperty("")
+        
         Signal.combineLatest(usernameSignal, passwordSignal)
         .filter{ username, password -> Bool in
             if username!.characters.count > 2 && password!.characters.count > 2 {
@@ -36,12 +39,15 @@ class MainViewController: UIViewController {
             }
         }
         .observeValues{username, password in
-            
+            usernameValue.value = username!
+            passwordValue.value = password!
         }
         
         button.reactive.controlEvents(.touchUpInside)
         .observeValues{ sender in
-            print("button clicked")
+            if usernameValue.value == "dinhthanhan" && passwordValue.value == "123456" {
+                
+            }
         }
     }
 }

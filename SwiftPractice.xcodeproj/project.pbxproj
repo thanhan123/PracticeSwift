@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57F58CC4E8FDEC08099679E8 /* Pods_SwiftPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49236F18B8D8C4D622141E60 /* Pods_SwiftPractice.framework */; };
+		D1AB1E5D1E93F8FD00CD7D3C /* InsertTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */; };
 		D1B729A51E8CF1B600356B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B729A41E8CF1B600356B6C /* AppDelegate.swift */; };
 		D1B729AC1E8CF1EC00356B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B729A71E8CF1EC00356B6C /* Assets.xcassets */; };
 		D1B729AD1E8CF1EC00356B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B729A81E8CF1EC00356B6C /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 		4805910AF07BB6CCC1352B68 /* Pods-SwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		49236F18B8D8C4D622141E60 /* Pods_SwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692E856D36E19A31AA48A431 /* Pods-SwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertTodoViewController.swift; sourceTree = "<group>"; };
 		D1B7298E1E8CF17600356B6C /* SwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B7299D1E8CF17600356B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B729A41E8CF1B600356B6C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D1B729B11E8CF23200356B6C /* MainViewController.swift */,
+				D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B729A51E8CF1B600356B6C /* AppDelegate.swift in Sources */,
+				D1AB1E5D1E93F8FD00CD7D3C /* InsertTodoViewController.swift in Sources */,
 				D1B729B21E8CF23200356B6C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +414,7 @@
 				D1B729A21E8CF17600356B6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
