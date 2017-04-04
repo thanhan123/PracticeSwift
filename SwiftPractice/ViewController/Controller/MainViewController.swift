@@ -26,19 +26,22 @@ class MainViewController: UIViewController {
         let passwordSignal = passwordTextField.reactive.continuousTextValues
         
         Signal.combineLatest(usernameSignal, passwordSignal)
-            .observeValues{aString, bString in
-                if aString!.characters.count > 2 && bString!.characters.count > 2 {
-                    self.button.backgroundColor = UIColor.green
-                } else {
-                    self.button.backgroundColor = UIColor.clear
-                }
-                print("username: \(aString!) - password: \(bString!)")
+        .filter{ username, password -> Bool in
+            if username!.characters.count > 2 && password!.characters.count > 2 {
+                self.button.backgroundColor = UIColor.green
+                return true
+            } else {
+                self.button.backgroundColor = UIColor.clear
+                return false
+            }
+        }
+        .observeValues{username, password in
+            
         }
         
-//        let a = MutableProperty<String>("")
-//        let b = MutableProperty<String>("")
-        
-//        usernameTextField.reactive.text <~ a
-//        passwordTextField.reactive.text <~ b
+        button.reactive.controlEvents(.touchUpInside)
+        .observeValues{ sender in
+            print("button clicked")
+        }
     }
 }
