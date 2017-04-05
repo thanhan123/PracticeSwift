@@ -6,5 +6,4 @@ target 'SwiftPractice' do
   use_frameworks!
 
   pod 'ReactiveCocoa'
-
 end

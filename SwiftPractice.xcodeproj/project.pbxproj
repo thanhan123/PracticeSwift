@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		57F58CC4E8FDEC08099679E8 /* Pods_SwiftPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49236F18B8D8C4D622141E60 /* Pods_SwiftPractice.framework */; };
+		D12C74581E94DE80009E1690 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12C74561E94DE80009E1690 /* Realm.framework */; };
+		D12C74591E94DE80009E1690 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12C74571E94DE80009E1690 /* RealmSwift.framework */; };
 		D1AB1E5D1E93F8FD00CD7D3C /* InsertTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */; };
 		D1B729A51E8CF1B600356B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B729A41E8CF1B600356B6C /* AppDelegate.swift */; };
 		D1B729AC1E8CF1EC00356B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B729A71E8CF1EC00356B6C /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		4805910AF07BB6CCC1352B68 /* Pods-SwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		49236F18B8D8C4D622141E60 /* Pods_SwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692E856D36E19A31AA48A431 /* Pods-SwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		D12C74561E94DE80009E1690 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		D12C74571E94DE80009E1690 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertTodoViewController.swift; sourceTree = "<group>"; };
 		D1B7298E1E8CF17600356B6C /* SwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B7299D1E8CF17600356B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,7 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12C74581E94DE80009E1690 /* Realm.framework in Frameworks */,
 				57F58CC4E8FDEC08099679E8 /* Pods_SwiftPractice.framework in Frameworks */,
+				D12C74591E94DE80009E1690 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D12C74551E94DE80009E1690 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D12C74561E94DE80009E1690 /* Realm.framework */,
+				D12C74571E94DE80009E1690 /* RealmSwift.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		D1B729851E8CF17600356B6C = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +95,7 @@
 		D1B729901E8CF17600356B6C /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				D12C74551E94DE80009E1690 /* Framework */,
 				D1B729AF1E8CF1FE00356B6C /* ViewController */,
 				D1B729A31E8CF1B600356B6C /* Application */,
 				D1B729A61E8CF1EC00356B6C /* Resource */,
@@ -372,6 +388,10 @@
 			baseConfigurationReference = 692E856D36E19A31AA48A431 /* Pods-SwiftPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftPractice/Framework",
+				);
 				INFOPLIST_FILE = SwiftPractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -386,6 +406,10 @@
 			baseConfigurationReference = 4805910AF07BB6CCC1352B68 /* Pods-SwiftPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftPractice/Framework",
+				);
 				INFOPLIST_FILE = SwiftPractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
