@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		57F58CC4E8FDEC08099679E8 /* Pods_SwiftPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49236F18B8D8C4D622141E60 /* Pods_SwiftPractice.framework */; };
+		D105B4051E9B3FF000ACE3C2 /* ListTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105B4041E9B3FF000ACE3C2 /* ListTodoViewController.swift */; };
+		D105B4091E9B45E000ACE3C2 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105B4081E9B45E000ACE3C2 /* TodoItemCell.swift */; };
+		D105B40C1E9B6C4300ACE3C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105B40B1E9B6C4300ACE3C2 /* Item.swift */; };
+		D105B40F1E9B82E800ACE3C2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D105B40D1E9B82E800ACE3C2 /* Realm.framework */; };
+		D105B4101E9B82E800ACE3C2 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D105B40D1E9B82E800ACE3C2 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D105B4111E9B82E800ACE3C2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D105B40E1E9B82E800ACE3C2 /* RealmSwift.framework */; };
+		D105B4121E9B82E800ACE3C2 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D105B40E1E9B82E800ACE3C2 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D12C74581E94DE80009E1690 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12C74561E94DE80009E1690 /* Realm.framework */; };
-		D12C74591E94DE80009E1690 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12C74571E94DE80009E1690 /* RealmSwift.framework */; };
+		D12C74591E94DE80009E1690 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12C74571E94DE80009E1690 /* RealmSwift.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D1AB1E5D1E93F8FD00CD7D3C /* InsertTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */; };
 		D1B729A51E8CF1B600356B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B729A41E8CF1B600356B6C /* AppDelegate.swift */; };
 		D1B729AC1E8CF1EC00356B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B729A71E8CF1EC00356B6C /* Assets.xcassets */; };
@@ -18,10 +25,30 @@
 		D1B729B21E8CF23200356B6C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B729B11E8CF23200356B6C /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D105B4131E9B82E800ACE3C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D105B4121E9B82E800ACE3C2 /* RealmSwift.framework in Embed Frameworks */,
+				D105B4101E9B82E800ACE3C2 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4805910AF07BB6CCC1352B68 /* Pods-SwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		49236F18B8D8C4D622141E60 /* Pods_SwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692E856D36E19A31AA48A431 /* Pods-SwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPractice/Pods-SwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		D105B4041E9B3FF000ACE3C2 /* ListTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTodoViewController.swift; sourceTree = "<group>"; };
+		D105B4081E9B45E000ACE3C2 /* TodoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
+		D105B40B1E9B6C4300ACE3C2 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D105B40D1E9B82E800ACE3C2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = SwiftPractice/Framework/Realm.framework; sourceTree = "<group>"; };
+		D105B40E1E9B82E800ACE3C2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = SwiftPractice/Framework/RealmSwift.framework; sourceTree = "<group>"; };
 		D12C74561E94DE80009E1690 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		D12C74571E94DE80009E1690 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertTodoViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D105B40F1E9B82E800ACE3C2 /* Realm.framework in Frameworks */,
+				D105B4111E9B82E800ACE3C2 /* RealmSwift.framework in Frameworks */,
 				D12C74581E94DE80009E1690 /* Realm.framework in Frameworks */,
 				57F58CC4E8FDEC08099679E8 /* Pods_SwiftPractice.framework in Frameworks */,
 				D12C74591E94DE80009E1690 /* RealmSwift.framework in Frameworks */,
@@ -65,6 +94,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D105B4071E9B459C00ACE3C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D105B4081E9B45E000ACE3C2 /* TodoItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D105B40A1E9B6C3200ACE3C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D105B40B1E9B6C4300ACE3C2 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D12C74551E94DE80009E1690 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +122,8 @@
 		D1B729851E8CF17600356B6C = {
 			isa = PBXGroup;
 			children = (
+				D105B40D1E9B82E800ACE3C2 /* Realm.framework */,
+				D105B40E1E9B82E800ACE3C2 /* RealmSwift.framework */,
 				D1B729901E8CF17600356B6C /* SwiftPractice */,
 				D1B7298F1E8CF17600356B6C /* Products */,
 				05B3D1AF0280403E61B38143 /* Pods */,
@@ -95,6 +142,7 @@
 		D1B729901E8CF17600356B6C /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				D105B40A1E9B6C3200ACE3C2 /* Model */,
 				D12C74551E94DE80009E1690 /* Framework */,
 				D1B729AF1E8CF1FE00356B6C /* ViewController */,
 				D1B729A31E8CF1B600356B6C /* Application */,
@@ -125,6 +173,7 @@
 		D1B729AF1E8CF1FE00356B6C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D105B4071E9B459C00ACE3C2 /* View */,
 				D1B729B01E8CF22200356B6C /* Controller */,
 			);
 			path = ViewController;
@@ -135,6 +184,7 @@
 			children = (
 				D1B729B11E8CF23200356B6C /* MainViewController.swift */,
 				D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */,
+				D105B4041E9B3FF000ACE3C2 /* ListTodoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +202,7 @@
 				D1B7298C1E8CF17600356B6C /* Resources */,
 				688BE00BA42F9B284E9C3AD0 /* [CP] Embed Pods Frameworks */,
 				2EDB6FD8E8B19CF3A811809A /* [CP] Copy Pods Resources */,
+				D105B4131E9B82E800ACE3C2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,8 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D105B4051E9B3FF000ACE3C2 /* ListTodoViewController.swift in Sources */,
 				D1B729A51E8CF1B600356B6C /* AppDelegate.swift in Sources */,
 				D1AB1E5D1E93F8FD00CD7D3C /* InsertTodoViewController.swift in Sources */,
+				D105B4091E9B45E000ACE3C2 /* TodoItemCell.swift in Sources */,
+				D105B40C1E9B6C4300ACE3C2 /* Item.swift in Sources */,
 				D1B729B21E8CF23200356B6C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

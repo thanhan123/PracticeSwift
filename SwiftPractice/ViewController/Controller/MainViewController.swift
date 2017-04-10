@@ -50,11 +50,11 @@ class MainViewController: UIViewController {
         }
         
         button.reactive.controlEvents(.touchUpInside)
-        .observeValues{ sender in            
+        .observeValues{ sender in
             if usernameString == "dinhthanhan" && passwordString == "123456" {
                 let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-                let insertTodoVC = storyBoard.instantiateViewController(withIdentifier: "InsertTodoViewController") as! InsertTodoViewController
-                self.navigationController?.pushViewController(insertTodoVC, animated: true)
+                let listTodoItemVC = storyBoard.instantiateViewController(withIdentifier: "ListTodoViewController") as! ListTodoViewController
+                self.navigationController?.pushViewController(listTodoItemVC, animated: true)
             }
         }
     }

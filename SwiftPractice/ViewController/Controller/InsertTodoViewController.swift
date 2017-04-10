@@ -30,6 +30,8 @@ class InsertTodoViewController: UIViewController{
     }
     
     func bindingUI() {
+        self.addButton.isEnabled = false
+        
         Signal.combineLatest(itemNameTextField.reactive.continuousTextValues, detailTextView.reactive.continuousTextValues)
         .observeValues{ itemNameString, itemDetailString in
             if (itemNameString?.characters.count)! > 0 && (itemDetailString?.characters.count)! > 0 {
@@ -51,12 +53,10 @@ class InsertTodoViewController: UIViewController{
     func addObjectToRealm(_ object: Object) {
         try! self.realm.write {
             self.realm.add(object)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                [unowned self] in
+                _ = self.navigationController?.popViewController(animated: true)
+            }
         }
     }
-}
-
-class Item: Object {
-    dynamic var itemName = ""
-    dynamic var itemDetail = ""
-    dynamic var itemDate = Date()
 }
