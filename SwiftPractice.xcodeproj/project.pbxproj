@@ -21,6 +21,7 @@
 		D1B729AD1E8CF1EC00356B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B729A81E8CF1EC00356B6C /* LaunchScreen.storyboard */; };
 		D1B729AE1E8CF1EC00356B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B729AA1E8CF1EC00356B6C /* Main.storyboard */; };
 		D1B729B21E8CF23200356B6C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B729B11E8CF23200356B6C /* MainViewController.swift */; };
+		D1DC66A11EA66B56001D208B /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC66A01EA66B56001D208B /* DetailItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		D1B729A91E8CF1EC00356B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1B729AB1E8CF1EC00356B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1B729B11E8CF23200356B6C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D1DC66A01EA66B56001D208B /* DetailItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				D1B729B11E8CF23200356B6C /* MainViewController.swift */,
 				D1AB1E5C1E93F8FD00CD7D3C /* InsertTodoViewController.swift */,
 				D105B4041E9B3FF000ACE3C2 /* ListTodoViewController.swift */,
+				D1DC66A01EA66B56001D208B /* DetailItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				D1B729A51E8CF1B600356B6C /* AppDelegate.swift in Sources */,
 				D1AB1E5D1E93F8FD00CD7D3C /* InsertTodoViewController.swift in Sources */,
 				D105B4091E9B45E000ACE3C2 /* TodoItemCell.swift in Sources */,
+				D1DC66A11EA66B56001D208B /* DetailItemViewController.swift in Sources */,
 				D105B40C1E9B6C4300ACE3C2 /* Item.swift in Sources */,
 				D1B729B21E8CF23200356B6C /* MainViewController.swift in Sources */,
 			);

@@ -47,7 +47,8 @@ class ListTodoViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func setupUI() {
         todoItemTableView.rowHeight = UITableViewAutomaticDimension
-        todoItemTableView.estimatedRowHeight = 100;
+        todoItemTableView.estimatedRowHeight = 100
+        todoItemTableView.tableFooterView = UIView()
     }
     
     func bindingUI() {
