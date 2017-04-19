@@ -29,34 +29,44 @@ class MainViewController: UIViewController {
     }
     
     func bindingUI() {
+        // binding UI 2 way
         usernameTextField.reactive.text <~ viewModel.usernameString.producer
+        viewModel.usernameString <~ usernameTextField.reactive.continuousTextValues.map { $0! }
         
-        let usernameSignal = usernameTextField.reactive.continuousTextValues
-        let passwordSignal = passwordTextField.reactive.continuousTextValues
+        passwordTextField.reactive.text <~ viewModel.passwordString.producer
+        viewModel.passwordString <~ passwordTextField.reactive.continuousTextValues.map { $0! }
         
-        button.reactive.backgroundColor <~ Signal.combineLatest(usernameSignal, passwordSignal).map({ usrn, pass in
-            return (usrn?.characters.count)! > 2 && (pass?.characters.count)! > 2 ? UIColor.green : UIColor.clear
-        })
-        
-        button.reactive.controlEvents(.touchUpInside)
-        .observeValues{ sender in
-            if self.usernameTextField.text == "dinhthanhan" && self.passwordTextField.text == "123456" {
-                let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-                let listTodoItemVC = storyBoard.instantiateViewController(withIdentifier: "ListTodoViewController") as! ListTodoViewController
-                self.navigationController?.pushViewController(listTodoItemVC, animated: true)
-            }
+        // combine property
+        let checkValidProperty = Property.combineLatest(viewModel.usernameString, viewModel.passwordString)
+        button.reactive.backgroundColor <~ checkValidProperty.map{ usrn, pass in
+            return (usrn.characters.count) > 2 && (pass.characters.count) > 2 ? UIColor.green : UIColor.clear
         }
+        button.reactive.isEnabled <~ checkValidProperty.map{ usrn, pass in
+            return (usrn.characters.count) > 2 && (pass.characters.count) > 2
+        }
+        
+//        button.reactive.controlEvents(.touchUpInside)
+//        .observeValues{ sender in
+//            if self.usernameTextField.text == "dinhthanhan" && self.passwordTextField.text == "123456" {
+//                let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+//                let listTodoItemVC = storyBoard.instantiateViewController(withIdentifier: "ListTodoViewController") as! ListTodoViewController
+//                self.navigationController?.pushViewController(listTodoItemVC, animated: true)
+//            }
+//        }
+        
+//        button.reactive.pressed = CocoaAction(viewModel.loginAction!)
     }
 }
 
 class MainViewModel {
     let usernameString = MutableProperty("")
+    let passwordString = MutableProperty("")
+//    let loginAction: Action<Void, Void, NoError>?
+//    let checkValidProperty: Property<(String, String)>?
     
     init() {
-        
-        usernameString.producer
-        .startWithValues { str in
-            print(str)
-        }
+//        loginAction = Action(enabledIf: { 1 > 0 }, { (<#Input#>) -> SignalProducer<_, _> in
+//            <#code#>
+//        })
     }
 }
