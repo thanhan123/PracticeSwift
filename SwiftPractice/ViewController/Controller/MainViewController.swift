@@ -19,6 +19,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var button: UIButton!
     
+    let viewModel = MainViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Login"
@@ -27,6 +29,8 @@ class MainViewController: UIViewController {
     }
     
     func bindingUI() {
+        usernameTextField.reactive.text <~ viewModel.usernameString.producer
+        
         let usernameSignal = usernameTextField.reactive.continuousTextValues
         let passwordSignal = passwordTextField.reactive.continuousTextValues
         
@@ -41,6 +45,18 @@ class MainViewController: UIViewController {
                 let listTodoItemVC = storyBoard.instantiateViewController(withIdentifier: "ListTodoViewController") as! ListTodoViewController
                 self.navigationController?.pushViewController(listTodoItemVC, animated: true)
             }
+        }
+    }
+}
+
+class MainViewModel {
+    let usernameString = MutableProperty("")
+    
+    init() {
+        
+        usernameString.producer
+        .startWithValues { str in
+            print(str)
         }
     }
 }
