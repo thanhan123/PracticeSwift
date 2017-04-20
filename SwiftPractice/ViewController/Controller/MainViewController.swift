@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
         
         passwordTextField.reactive.text <~ viewModel.passwordString.producer
         viewModel.passwordString <~ passwordTextField.reactive.continuousTextValues.map { $0! }
-        
+                
         // combine property
         let checkValidProperty = Property.combineLatest(viewModel.usernameString, viewModel.passwordString)
         button.reactive.backgroundColor <~ checkValidProperty.map{ usrn, pass in
@@ -45,28 +45,22 @@ class MainViewController: UIViewController {
             return (usrn.characters.count) > 2 && (pass.characters.count) > 2
         }
         
-//        button.reactive.controlEvents(.touchUpInside)
-//        .observeValues{ sender in
-//            if self.usernameTextField.text == "dinhthanhan" && self.passwordTextField.text == "123456" {
-//                let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-//                let listTodoItemVC = storyBoard.instantiateViewController(withIdentifier: "ListTodoViewController") as! ListTodoViewController
-//                self.navigationController?.pushViewController(listTodoItemVC, animated: true)
-//            }
-//        }
-        
-//        button.reactive.pressed = CocoaAction(viewModel.loginAction!)
+        button.reactive.controlEvents(.touchUpInside)
+        .observeValues{ sender in
+            if self.viewModel.usernameString.value == "dinhthanhan" && self.viewModel.passwordString.value == "123456" {
+                let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+                let listTodoItemVC = storyBoard.instantiateViewController(withIdentifier: "ListTodoViewController") as! ListTodoViewController
+                self.navigationController?.pushViewController(listTodoItemVC, animated: true)
+            }
+        }
     }
 }
 
 class MainViewModel {
     let usernameString = MutableProperty("")
     let passwordString = MutableProperty("")
-//    let loginAction: Action<Void, Void, NoError>?
-//    let checkValidProperty: Property<(String, String)>?
     
     init() {
-//        loginAction = Action(enabledIf: { 1 > 0 }, { (<#Input#>) -> SignalProducer<_, _> in
-//            <#code#>
-//        })
+
     }
 }
